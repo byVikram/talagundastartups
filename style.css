@@ -55,7 +55,22 @@ body {
 .hero {
     padding: 8rem 0 5rem;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background-image: url("https://static.vecteezy.com/system/resources/previews/011/220/320/original/startup-project-horizontal-concept-banner-rocket-launch-illustration-vector.jpg");
+    background-size: cover;
+    background-color: #29aae1;
+    position: relative;
 }
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Black overlay with 50% opacity */
+    z-index: 1; /* Places the overlay above the background */
+  }
 
 .hero h1 {
     font-size: 3.5rem;
@@ -66,7 +81,132 @@ body {
 
 .hero .lead {
     font-size: 1.25rem;
+    font-weight: 400;
     margin-bottom: 2rem;
+    color: black;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 4rem 0;
+}
+.banner{
+    margin-top: 60px;
+}
+
+/* Blog Styles */
+.featured-post {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.blog-posts .card {
+    transition: transform 0.3s ease;
+}
+
+.blog-posts .card:hover {
+    transform: translateY(-5px);
+}
+
+.newsletter-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Pricing Styles */
+.pricing-toggle {
+    margin-bottom: 2rem;
+}
+
+.pricing-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card.border-primary {
+    border: 2px solid var(--primary-color) !important;
+}
+
+/* Team Styles */
+.team-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.culture-card {
+    transition: transform 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Careers Styles */
+.benefit-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-item {
+    padding: 2rem 0;
+    border-left: 2px solid var(--primary-color);
+    margin-left: 1rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 2rem;
+    width: 1rem;
+    height: 1rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.timeline-content {
+    margin-left: 2rem;
 }
 
 /* Feature Boxes */
@@ -165,6 +305,12 @@ footer {
     .hero img {
         margin-top: 2rem;
     }
+
+    .hero{
+        background-position-y: bottom ;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 @media screen and (max-width:799px) {
@@ -183,3 +329,18 @@ footer {
 }
 
 .nav-links {}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pricing-toggle .btn-group {
+        flex-direction: column;
+    }
+    
+    .timeline-item {
+        margin-left: 0;
+    }
+    
+    .timeline-content {
+        margin-left: 1rem;
+    }
+}
