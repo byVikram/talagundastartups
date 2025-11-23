@@ -16,6 +16,14 @@ body {
     margin: 0 !important;
 }
 
+.main-logo{
+    max-width: 200px;
+}
+
+.footer-logo{
+    max-width: 240px;
+}
+
 /* Navbar Styles */
 .navbar {
     background-color: white;
