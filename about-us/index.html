@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Talgunda Startups</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script defer src="../scripts/tailwind-config.js"></script>
+    <style>
+        /* Custom styles for the about page */
+        .about-hero {
+            /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); */
+            /* background-size: cover;
+            background-position: center; */
+        }
+
+        .contact-gradient {
+            background: var(--primary-gradient);
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover .icon-wrapper {
+            transform: scale(1.1);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 18px);
+            background-color: #e5e7eb;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .mission-vision-card {
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .mission-vision-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .team-member {
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gif-loader">
+        <div id="loader" class="loader-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-16 text-white contact-gradient">
+        <div class="container max-w-7xl mx-auto px-4 py-20">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About Talgunda Startups</h1>
+                <!-- <p class="text-xl md:text-2xl mb-8">Empowering innovation, fostering growth, and building the future of
+                    entrepreneurship</p> -->
+                <div class="w-32 h-1 bg-white mx-auto mb-10"></div>
+                <p class="text-lg md:text-xl opacity-90">We're a forward-thinking startup ecosystem dedicated to
+                    transforming ideas into successful ventures through innovation, strategic guidance, product
+                    development, training and collaborations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 bg-white">
+        <div class="container max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-6 text-lg">Founded in 2025, Talgunda Startups was established to support
+                        innovators and entrepreneurs in transforming ideas into viable, market-ready businesses.</p>
+                    <p class="text-gray-600 mb-6 text-lg">We have grown into a comprehensive startup support ecosystem,
+                        providing product development, training, mentorship, and industry connections.</p>
+
+                </div>
+
+                <!-- <div class="relative">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 shadow-lg">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white rounded-xl p-6 text-center shadow stat-card">
+                                <div class="text-4xl font-bold gradient-text mb-2">200+</div>
+                                <div class="text-gray-600 font-medium">Startups Supported</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-6 text-center shadow stat-card">
+                                <div class="text-4xl font-bold gradient-text mb-2">85%</div>
+                                <div class="text-gray-600 font-medium">Success Rate</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-6 text-center shadow stat-card">
+                                <div class="text-4xl font-bold gradient-text mb-2">$50M+</div>
+                                <div class="text-gray-600 font-medium">Funding Raised</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-6 text-center shadow stat-card">
+                                <div class="text-4xl font-bold gradient-text mb-2">12</div>
+                                <div class="text-gray-600 font-medium">Countries Reached</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Mission & Vision</h2>
+                <p class="text-xl text-gray-600">Guiding principles that shape our approach and define our purpose</p>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Mission Card -->
+                <div class="mission-vision-card bg-white shadow-xl">
+                    <div class="p-8">
+                        <div class="icon-wrapper bg-blue-100 text-blue-600 mb-6">
+                            <i class="bi bi-bullseye text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Mission</h3>
+                        <p class="text-gray-600 mb-6 text-lg">Our mission is to transform waste and raw materials into
+                            marketable novel products and empowering individuals through education, skill development,
+                            and sustainable entrepreneurship.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="bi bi-check-circle-fill text-blue-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Identify the gap and fill it by transforming it into
+                                    wealth.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="bi bi-check-circle-fill text-blue-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Foster a collaborative industrial and entrepreneurial
+                                    community.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="bi bi-check-circle-fill text-blue-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Bridge the gap between innovation and market
+                                    sustainability.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="bg-blue-50 p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Mission in Action</h4>
+                        <p class="text-gray-600">We actively work towards this mission through our programs, training, transforming, building investor networks, and hands-on mentorship initiatives.</p>
+                    </div> -->
+                </div>
+
+                <!-- Vision Card -->
+                <div class="mission-vision-card bg-white shadow-xl">
+                    <div class="p-8">
+                        <div class="icon-wrapper bg-purple-100 text-purple-600 mb-6">
+                            <i class="bi bi-eye text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Vision</h3>
+                        <p class="text-gray-600 mb-6 text-lg">We care nature.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="bi bi-star-fill text-purple-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Promote harmony between nature, industry, and human
+                                    development.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="bi bi-star-fill text-purple-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Promote industry-driven innovation and
+                                    entrepreneurship</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="bi bi-star-fill text-purple-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Protect nature through sustainable industrial
+                                    practices.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="bg-purple-50 p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Vision Towards 2030</h4>
+                        <p class="text-gray-600">By 2030, we aim to support over 1,000 startups and help create 10,000+
+                            jobs in emerging industries worldwide.</p>
+                    </div> -->
+                </div>
+            </div>
+            <div>
+
+                <div class="mt-6 p-6 text-center">
+                    <h4 class="font-bold text-gray-800 mb-2">Mission in Action</h4>
+                    <p class="text-gray-600">We actively work towards this mission through our programs, training,
+                        transforming, building networks, and hands-on mentorship initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-16 bg-white">
+        <div class="container max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Core Values</h2>
+                <p class="text-xl text-gray-600">The principles that guide every decision we make and interaction we
+                    have</p>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div
+                    class="value-card text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+                    <div class="icon-wrapper bg-green-100 text-green-600">
+                        <i class="bi bi-lightbulb text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Innovation</h4>
+                    We foster innovative ideas that lead to practical, sustainable, and market-ready solutions.</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div
+                    class="value-card text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+                    <div class="icon-wrapper bg-red-100 text-red-600">
+                        <i class="bi-box-seam text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Product Developing</h4>
+                    <p class="text-gray-600">We focus on transforming ideas and raw materials into practical,
+                        market-ready products by applying innovation, industry standards, and sustainable design
+                        principles.</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div
+                    class="value-card text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+                    <div class="icon-wrapper bg-yellow-100 text-yellow-600">
+                        <i class="bi-person-workspace text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Training</h4>
+                    <p class="text-gray-600">We provide hands-on training and skill development programs that equip
+                        individuals with the technical, entrepreneurial, and industrial knowledge needed to build
+                        successful ventures.</p>
+                </div>
+
+                <!-- Value 4 -->
+                <div
+                    class="value-card text-center p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all duration-300">
+                    <div class="icon-wrapper bg-blue-100 text-blue-600">
+                        <!-- <i class="bi-diagram-3 text-3xl"></i> -->
+                        <img src="../assets/network.png" width="44px" />
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Networking</h4>
+                    <p class="text-gray-600">We create strong networks that connect entrepreneurs, industry experts,
+                        investors, and institutions to foster collaboration, growth, and long-term business success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta-section">
+    </section>
+
+    <footer id="footer" class="bg-gray-800 text-white">
+    </footer>
+
+    <script defer>
+        async function loadSection(sectionId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                const html = await response.text();
+                document.getElementById(sectionId).innerHTML = html;
+
+                // If loading FAQ, initialize it
+                if (sectionId === 'faq-section') {
+                    initializeFAQ();
+                }
+            } catch (error) {
+                console.error('Error loading section:', error);
+            }
+        }
+
+        // Load each section
+        document.addEventListener('DOMContentLoaded', function () {
+            loadSection('cta-section', '../components/cta.html');
+            loadSection('faq-section', '../components/faq.html');
+        });
+
+
+
+    </script>
+
+
+    <script src="../scripts/include.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js" defer></script>
+</body>
+
+</html>
